@@ -1,0 +1,30 @@
+{
+  "name": "tweet-feed-assignment",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "babel-node ./bin/www",
+    "client": "babel-node start-client.js",
+    "dev": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "hbs": "^4.1.0",
+    "http-errors": "~1.6.3",
+    "mongoose": "^5.9.7",
+    "morgan": "~1.9.1",
+    "socket.io": "^2.3.0",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2"
+  }
+}

@@ -1,0 +1,102 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.tweets {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.tweet{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    max-height: 0px;
+    margin: 0;
+    list-style-type: none;
+    background: white;
+    border: 1px solid #e9ecef;
+    border-bottom: none;
+    padding: 5px;
+}
+
+.tweet:last-child{
+    border-bottom: 1px solid #e9ecef;
+}
+
+.tweet.active{
+    max-height: 125px;
+    -webkit-transition: 1s all ease;
+       -moz-transition: 1s all ease;
+        -ms-transition: 1s all ease;
+         -o-transition: 1s all ease;
+            transition: 1s all ease;
+}
+
+.tweet .avatar{
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 48px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 48px;
+}
+
+.tweet blockquote{
+    font-size: 14px;
+    display: inline-block;
+    float: right;
+    width: calc(100% - 72px);
+    margin: 0;
+    padding: 10px;
+}
+
+.tweet blockquote cite{
+    font-weight: bold;
+    font-style: normal;
+}
+
+.tweet blockquote cite a{
+    font-size: 15px;
+    display: inline-block;
+    margin-right: 5px;
+    text-decoration: none;
+    color: #14170A;
+}
+
+.tweet blockquote cite a:hover{
+    text-decoration: underline;
+}
+
+.tweet blockquote .screen-name{
+    font-size: 15px;
+    font-weight: normal;
+    color: #657786;
+}
+
+.tweet blockquote .content{
+    display: block;
+    clear: left;
+    margin-top: 5px;
+    color: #14171A;
+    font-size: 15px;
+}
+
+.tweet:before,
+.tweet:after{
+    display: table;
+    content: ' ';
+}
+
+.tweet:after{
+    clear: both;
+}
